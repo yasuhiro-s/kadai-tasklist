@@ -19,8 +19,13 @@
   
 <% end %>
   
+<%= f.label :status, 'ステータス' %>
+
   
-<%= f.label :content, 'メッセージ' %>
+<%= f.text_field :status %>
+
+
+<%= f.label :content, 'タスク' %>
 
   
 <%= f.text_field :content %>
