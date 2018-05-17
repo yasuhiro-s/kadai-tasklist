@@ -4,7 +4,7 @@ class TasksController < ApplicationController
   before_action :correct_user, only: [:destroy]
  
  
-def index
+  def index
   @tasks= Task.all
   end
 
@@ -31,14 +31,12 @@ def index
   end
 
   def edit
-    
   end
 
   def update
-    
     if @task.update(task_params)
       flash[:success] = 'Task は正常に更新されました'
-      redirect_to @task
+      redirect_to root_url
     else
       flash.now[:danger] = 'Task は更新されませんでした'
       render :edit
